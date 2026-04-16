@@ -1,0 +1,65 @@
+{
+  "name": "svs-odisha",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev",
+    "dev:web": "turbo run dev --filter=@svs/web",
+    "dev:api": "turbo run dev --filter=@svs/api",
+    "build": "turbo run build",
+    "build:web": "turbo run build --filter=@svs/web",
+    "build:api": "turbo run build --filter=@svs/api",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test",
+    "db:generate": "turbo run db:generate --filter=@svs/database",
+    "db:push": "turbo run db:push --filter=@svs/database",
+    "db:seed": "turbo run db:seed --filter=@svs/database",
+    "db:migrate": "turbo run db:migrate:prod --filter=@svs/database",
+    "db:migrate:dev": "turbo run db:migrate --filter=@svs/database",
+    "db:migrate:prod": "turbo run db:migrate:prod --filter=@svs/database",
+    "db:studio": "npm run db:studio --workspace=@svs/database",
+    "perf:api": "tsx scripts/perf/benchmark.ts",
+    "perf:api:save": "tsx scripts/perf/benchmark.ts --save",
+    "clean": "turbo run clean && rm -rf node_modules",
+    "docker:up": "docker compose up -d",
+    "docker:down": "docker compose down",
+    "docker:up:app": "docker compose -f docker-compose.yml -f docker-compose.app.yml --profile app up -d --build",
+    "docker:down:app": "docker compose -f docker-compose.yml -f docker-compose.app.yml --profile app down",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.22.0",
+    "@types/node": "^22.19.3",
+    "@types/pg": "^8.16.0",
+    "eslint": "^9.22.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
+    "globals": "^16.0.0",
+    "husky": "^9.1.7",
+    "prettier": "^3.4.2",
+    "prisma": "^7.2.0",
+    "tsx": "^4.21.0",
+    "turbo": "^2.7.3",
+    "typescript-eslint": "^8.26.0",
+    "typescript": "^5.8.3"
+  },
+  "packageManager": "npm@10.8.2",
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0"
+  },
+  "dependencies": {
+    "@prisma/adapter-pg": "^7.2.0",
+    "@prisma/client": "^7.2.0",
+    "dotenv": "^17.2.3",
+    "pg": "^8.16.3",
+    "razorpay": "^2.9.6",
+    "stripe": "^20.1.2"
+  }
+}

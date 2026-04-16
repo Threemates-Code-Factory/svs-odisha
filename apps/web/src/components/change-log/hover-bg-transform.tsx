@@ -1,0 +1,14 @@
+import { cn } from '@/utils/cn';
+
+const HoverBgTransform = ({ className }: { className?: string }) => {
+  return (
+    <div
+      className={cn(
+        'absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-background-3 dark:bg-background-7 opacity-0 group-hover:opacity-100 rounded-[10px] z-0 transition-all duration-400',
+        className,
+      )}></div>
+  );
+};
+
+HoverBgTransform.displayName = 'HoverBgTransform';
+export default HoverBgTransform;
