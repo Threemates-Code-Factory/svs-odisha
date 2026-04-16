@@ -4,7 +4,7 @@ import Springer from '@/utils/springer';
 import { useGSAP } from '@gsap/react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import React, { ReactElement, Ref, cloneElement, useRef } from 'react';
+import React, { ReactElement, Ref, cloneElement, useEffect, useRef, useState } from 'react';
 
 // Register GSAP plugins
 if (typeof window !== 'undefined') {
@@ -15,7 +15,7 @@ interface RevealAnimationProps {
   children: ReactElement<{
     className?: string;
     ref?: Ref<HTMLElement>;
-    'data-ns-animate'?: boolean;
+    'data-ns-animate'?: string;
   }>;
   duration?: number;
   delay?: number;
@@ -45,8 +45,17 @@ const RevealAnimation = ({
   className = '',
 }: RevealAnimationProps) => {
   const elementRef = useRef<HTMLElement>(null);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   useGSAP(() => {
+    if (!isMounted) {
+      return;
+    }
+
     const element = elementRef.current;
     if (!element) {
       return;
@@ -137,18 +146,24 @@ const RevealAnimation = ({
     } else {
       gsap.from(element, animationProps);
     }
-  }, [duration, delay, offset, instant, start, end, direction, useSpring, rotation, animationType]);
+  }, [duration, delay, offset, instant, start, end, direction, useSpring, rotation, animationType, isMounted]);
 
   // Early return if children is not valid (after all hooks)
   if (!children || !React.isValidElement(children)) {
     return null;
   }
 
+  if (!isMounted) {
+    return cloneElement(children, {
+      className: cn(children?.props?.className, className),
+    });
+  }
+
   // Clone the child element and add the ref, className, and data-ns-animate attribute
   return cloneElement(children, {
     ref: elementRef,
     className: cn(children?.props?.className, className),
-    'data-ns-animate': true,
+    'data-ns-animate': 'true',
   });
 };
 

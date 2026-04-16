@@ -1,0 +1,37 @@
+
+> svs-odisha@1.0.0 build:web
+> turbo run build --filter=@svs/web
+
+• turbo 2.9.6
+
+   • Packages in scope: @svs/web
+   • Running build in 1 packages
+   • Remote caching disabled
+
+@svs/web:build: cache miss, executing b1dfe17a55b1a168
+@svs/web:build: 
+@svs/web:build: > @svs/web@2.1.0 build
+@svs/web:build: > next build
+@svs/web:build: 
+@svs/web:build: ⨯ Another next build process is already running.
+@svs/web:build: 
+@svs/web:build:   This could be:
+@svs/web:build:   - A next build still in progress
+@svs/web:build:   - A previous build that didn't exit cleanly
+@svs/web:build: 
+@svs/web:build:   Suggestion: Wait for the build to complete.
+@svs/web:build: npm error Lifecycle script `build` failed with error:
+@svs/web:build: npm error code 1
+@svs/web:build: npm error path E:\SVS ODISHA\apps\web
+@svs/web:build: npm error workspace @svs/web@2.1.0
+@svs/web:build: npm error location E:\SVS ODISHA\apps\web
+@svs/web:build: npm error command failed
+@svs/web:build: npm error command C:\WINDOWS\system32\cmd.exe /d /s /c next build
+ ERROR  @svs/web#build: command (E:\SVS ODISHA\apps\web) C:\Program Files\nodejs\npm.cmd run build exited (1)
+
+ Tasks:    0 successful, 1 total
+Cached:    0 cached, 1 total
+  Time:    5.097s 
+Failed:    @svs/web#build
+
+ ERROR  run failed: command  exited (1)

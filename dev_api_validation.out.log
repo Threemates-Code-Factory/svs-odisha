@@ -1,0 +1,20 @@
+
+> svs-odisha@1.0.0 dev:api
+> turbo run dev --filter=@svs/api
+
+
+   • Packages in scope: @svs/api
+   • Running dev in 1 packages
+   • Remote caching disabled
+
+@svs/api:dev: cache bypass, force executing 17f1b2d6a573d384
+@svs/api:dev: 
+@svs/api:dev: > @svs/api@1.0.0 dev
+@svs/api:dev: > tsx watch src/server.ts
+@svs/api:dev: 
+@svs/api:dev: ◇ injected env (1) from ..\..\.env // tip: ◈ secrets for agents [www.dotenvx.com]
+@svs/api:dev: Port 4001 is in use, retrying on 4002...
+@svs/api:dev: Port 4002 is in use, retrying on 4003...
+@svs/api:dev: Port 4003 is in use, retrying on 4004...
+@svs/api:dev: API listening on 4004
+@svs/api:dev: ^C^C

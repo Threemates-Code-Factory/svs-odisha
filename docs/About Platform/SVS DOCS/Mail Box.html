@@ -1,0 +1,642 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head><title>
+	Mail Box
+</title><link rel="stylesheet" href="../css/ssvm.css" type="text/css" />
+
+    <script src="../Scripts/pngfix.js" type="text/javascript" language="javascript"></script>
+
+    <script src="../Scripts/dropdown.js" type="text/javascript" language="javascript"></script>
+
+    <script src="../Scripts/jquery-1.7.2.min.js" type="text/javascript" language="javascript"></script>
+
+    
+
+    <script src="../Scripts/jquery.min.js" type="text/javascript"></script>
+
+    <link href="../css/jquery-ui.css" rel="stylesheet" type="text/css" />
+
+    <script src="../Scripts/jquery-ui.min.js" type="text/javascript"></script>
+
+</head>
+<body id="ctl00_body">
+    
+    <form name="aspnetForm" method="post" action="MailBox.aspx" id="aspnetForm">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/svsemsnew/WebResource.axd?d=tA0s0QwzVIiF47dNNXlVfA0goIKLmFcY8l4MR-VvPxoAV0GZ2k6umW6RbG6LTeLSNKIszroDYWwdpIW5HSDzyzqlCZg1&amp;t=638313988859278837" type="text/javascript"></script>
+
+
+<script src="/svsemsnew/ScriptResource.axd?d=u1lcHX0ZsuLPJC8nF0yd559E3yFN_Dx1w4x04mt3shRaUjcjsYwW1ARAVwyzdgNMnJ5DoOQBPES4nYfAQNTTa2LmYvf8M-tc23z3hyh2vHccJKTwqHkUBM9QMfd9UUvw2_OFIJuFC__NpmIYqtwdgHEvRPCzjMfIXzIQv_lpzWg9TitB0&amp;t=ffffffff9bc22534" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<script src="/svsemsnew/ScriptResource.axd?d=_DqqbRrgU0DWMvVW-zEasWNhxG3vj3LBwbO-qNaVucXQ1kf-2QlXSAx72ElmmbQscKLK-YxQ_aYWH9mOdQjYvhnRMC_yqgMidg3vcQj47zoHa6BhlyjHHCKunQ9jCAbz6jXZgiC5x7gXU4BnQRNM4mQEqmuypnaQBQOLS52TQRfY2auw0&amp;t=ffffffff9bc22534" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="EF7CD0BD" />
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="2w5NTTO0Mhj4G3msiZPhymJcUkcPKlWj3+Ai1TysHoJCnOpqBa6QLxjael5l8rbYSgUhy/uAB5qYk+z6yJLDKaGeUQ/zbk10qQiR3dXacktRIYih8iqXbCLykxkafI/esRgwPwiosOYo3u8VeaUoS4fQiw2pGZepk/szbNYnJbQwWvL0xtwvSA6JP+bLjFuyjZe4aRvuqTpNPQ0gqrDsmZNge1pFBupzRuOLbhCGJQNKn7FOWS2cEiAASGWlEhxOuiIMMQ==" />
+</div>
+    <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', document.getElementById('aspnetForm'));
+Sys.WebForms.PageRequestManager.getInstance()._updateControls([], [], [], 90);
+//]]>
+</script>
+
+    
+    <table width="100%" border="0" align="right" cellpadding="0" cellspacing="0" class="outertbl">
+        <tr>
+            <td class="topbar">
+                <div class="topcentname">
+                    <div class="logo1">
+                    </div>
+                    <div class="logo2">
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top" class="navbar">
+                <ul id="nav">
+                    <li class="top"><a href="../Home/AdminHome.aspx">
+                        <img src="../images/home.gif" height="35" width="44"></a></li>
+                    <li class="top"><a href="../Establishment/MailBox.aspx" class="top_link">Mail Box</a>
+                        <li class="top"><a href="#" class="top_link"><span class="down">Users</span></a>
+                            <ul class="sub">
+                                <li><a href="../Users/ChangePW.aspx">Change Password</a></li>
+                            </ul>
+                        </li>
+                        <li class="top"><a href="#" class="top_link"><span class="down">Masters</span></a>
+                            <ul class="sub">
+                                <li><a href="#">No Sub Menu</a></li>
+                            </ul>
+                        </li>
+                        <li class="top"><a href="#" class="top_link"><span class="down">Establishment</span></a>
+                            <ul class="sub">
+                                <li><a href="#" class="fly">Manage Schools</a>
+                                    <ul>
+                                        <li><a href="../Establishment/SchoolInformations.aspx">School Details</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#" class="fly">Manage Sevavratis</a>
+                                    <ul>
+                                        <li><a href="../Establishment/EmpListSSVM.aspx">Sevabrati Details</a></li>
+                                        <li><a href="../Establishment/EmpListSSVM_Temp.aspx">Serach Sevabrati for SAATF</a></li>
+                                        
+                                    </ul>
+                                </li>
+                                <li><a href="#" class="fly">Manage Student</a>
+                                    <ul>
+                                        <li><a href="../Establishment/StudentList.aspx">Student Admission</a></li>
+                                        <li><a href="../Establishment/StudClassPromotion.aspx">Student Promotion</a></li>
+                                        <li><a href="../Establishment/StudentStatus.aspx">Modify Student Status</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#" class="fly">Correspondence</a>
+                                    <ul>
+                                        <li><a href="../Establishment/FileUploadList.aspx">Compose New Mail</a></li>
+                                        <li><a href="../Establishment/MailBox.aspx">Mail Box</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#" class="fly">Reports</a>
+                                    <ul>
+                                        <li><a href="#" class="fly">School</a>
+                                            <ul>
+                                                <li><a href="../Establishment/rptSchoolList.aspx">SSVM List</a></li>
+                                                <li><a href="../Establishment/rptSchoolListNew.aspx">SSVM List (Detailed)</a></li>
+                                                <li><a href="../Establishment/rptManagingCommittee.aspx">Managing Committee</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#" class="fly">Sevabrati</a>
+                                            <ul>
+                                                <li><a href="../Establishment/rptEmployeeList.aspx">Sevabrati List</a></li>
+                                                <li><a href="../Establishment/rptEmployeeListNew.aspx">Sevabrati List (Employment Details)</a></li>
+                                                <li><a href="../Establishment/rptEmpStatus.aspx">Sevabrati Status</a></li>
+                                                <li><a href="../Establishment/rptTrainedStaffs.aspx">Sevabrati Training</a></li>
+                                                <li><a href="../Establishment/rptRetiringSevabrati.aspx">List of Retiring Sevabrati</a></li>
+                                            </ul>
+                                        </li>
+                                        
+                                        <li><a href="../Establishment/rptHolidaysList.aspx">Holidays List</a></li>
+                                        <li><a href="#" class="fly">Addresses</a>
+                                            <ul>
+                                                <li><a href="../Establishment/rptBibhagAddress.aspx">Bibhag</a></li>
+                                                <li><a href="../Establishment/rptSankulaAddress.aspx">Sankula</a></li>
+                                                <li><a href="../Establishment/rptSSVMAddresses.aspx">SSVM</a></li>
+                                                <li><a href="../Establishment/rptCIAddresses.aspx">DEO</a></li>
+                                                <li><a href="../Establishment/rptDIAddress.aspx">BEO</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="top"><a href="#" class="top_link"><span class="down">Accounts</span></a>
+                            <ul class="sub">
+                                <li><a href="#" class="fly">Sahajoga Rasi Bibarani</a>
+                                    <ul>
+                                        <li><a target="_blank" href="../Up_Files/SahajogaRashiHelpManual.pdf">Help Manual(Sahajoga
+                                            Rashi Bibarani)</a></li>
+                                        <li><a href="../Accounts/SahajogaRasiBibaraniDeclare.aspx">Def. Stud Strength For Sahajoga
+                                            Rasi</a></li>
+                                        <li><a href="../Accounts/SahajogaRasiBibaraniList.aspx">Sahajoga Rasi Bibarani By SSVM</a></li>
+                                        <li><a href="../Accounts/SahajogaRasiBibaraniBalPay.aspx">Sahajoga Rasi Bibarani Bal.Payment</a></li>
+                                        <li><a href="#" class="fly">Reports</a>
+                                            <ul>
+                                                <li><a href="../Accounts/rptSahajogaRasiBibaraniSSVM.aspx">Sahajoga Rasi Bibarani By
+                                                    SSVM</a></li>
+                                                <li><a href="../Establishment/rptClasswisestudents.aspx">Class wise Stud Strength(Paid)</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="#" class="fly">Acharya Kalyana Panthi</a>
+                                    <ul>
+                                        
+                                        <li><a target="_blank" href="../Up_Files/SVS_AKP_OnlinePayHelpManual.pdf">Help Manual(Acharya
+                                            Kalyan Panthi)</a></li>
+                                        <li><a href="../Accounts/AKP_MemberList.aspx">AKP Membership Registration</a></li>
+                                        
+                                        <li><a href="../Accounts/AKP_ReceivePayment.aspx">Receive AKP Payment from Members</a></li>
+                                        <li><a href="../Accounts/AKP_SendPaymentToHO_Old.aspx">AKP Payment to PO- OFFLINE Mode</a></li>
+                                        <li><a href="../Accounts/AKP_SendPaymentToHO_OLP.aspx">AKP Payment to PO- ONLINE Mode</a></li>
+                                        <li><a href="../Accounts/AKP_SendPaymentToHOList.aspx">Download AKP Payment Money Receipt</a></li>
+                                        
+                                        <li><a href="../Accounts/AKP_ClaimByMemberList.aspx">AKP Claim by Members</a></li>
+                                        
+                                        <li><a href="#" class="fly">Reports</a>
+                                            <ul>
+                                                <li><a href="../Accounts/rptAKP_MemberList.aspx">AKP Member List - Approved</a></li>
+                                                <li><a href="../Accounts/rptAKPMemberApplicationForm.aspx">AKP Membership Details</a></li>
+                                                
+                                                <li><a href="../Accounts/AKPReport.aspx">AKP Payment Approval Status</a></li>
+                                                <li><a href="../Accounts/rptAKPContributionMember.aspx">Member Wise AKP Contribution
+                                                </a></li>
+                                                <li><a href="../Accounts/rptAKPClaims.aspx">AKP Member Claims</a></li>
+                                                <li><a href="../Accounts/rptAKPClaimPaid.aspx">AKP Claim Paid</a></li>
+                                                <li><a href="../Accounts/rptAKPClaimStatus.aspx">AKP Claim Status</a></li>
+                                                
+                                                
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="#" class="fly">Sebabrati Anutosik Anudan Trust Fund</a>
+                                    <ul>
+                                        <li><a target="_blank" href="../Up_Files/SVS_AATF_OnlinePayHelpManual.pdf">Help Manual(SAATF)</a></li>
+                                        <li><a href="../Accounts/SAATF_MemberList.aspx">Define SAATF Member Details</a></li>
+                                        <li><a href="../Accounts/SAATF_SetStaffMontlyContributionsDetails.aspx">Generate SAATF
+                                            Mly Statement</a></li>
+                                        <li><a href="../Accounts/SAATF_EstWiseMonthlyContbDetailList.aspx">SAATF Mly Payment
+                                            to PO - ONLINE</a></li>
+                                        
+                                        <li><a href="../Accounts/SAATF_EstWiseMlyCont_OfflinePaidInfo.aspx">Mly Payment to PO
+                                            - OFFLINE - NEW</a></li>
+                                        <li><a href="../Accounts/SAATF_EstWiseMlyCont_OfflinePaidList.aspx">Delete Mly Payment
+                                            - OFFLINE</a></li>
+                                        
+                                        
+                                        <li><a href="../Accounts/SAATF_ClaimByMemberList.aspx">SAATF Claim</a></li>
+                                        <li><a href="#" class="fly">Reports</a>
+                                            <ul>
+                                                <li><a href="../Accounts/rptSAATFMemberList.aspx">SAATF Member List</a></li>
+                                                <li><a href="../Accounts/rptSAATFNewMembers.aspx">SAATF New Member List</a></li>
+                                                <li><a href="../Accounts/rptSAATFMembNomRegd.aspx">SAATF Nominee Details</a></li>
+                                                <li><a href="../Accounts/SAATF_StafwiseContbList.aspx">SAATF Month wise Contributions
+                                                    All Emp.</a></li>
+                                                <li><a href="../Accounts/SATF_EmpWiseContbDeatilsList.aspx">SAATF EmpWise Contrib Details</a></li>
+                                                <li><a href="../Accounts/SAATF_MonthlyContbHistory.aspx">SAATF Mly. Contrib. History</a></li>
+                                                <li><a href="../Accounts/SAATF_Contb_ReceiptVoicher.aspx">Payment Receipt</a></li>
+                                                <li><a href="../Accounts/SAATF_EstMonthlyPaidStatus.aspx">SAATF Mly. Contrib. Status</a></li>
+                                                <li><a href="../Accounts/SAATF_EstWiseLedgerCon.aspx">SAATF Ledger Report(Con)</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="#" class="fly">Prasikshyana Sulka</a>
+                                    <ul>
+                                        <li><a target="_blank" href="../Up_Files/SVS_PrasishanaSulkaReg_OnlinePayHelpManual.pdf">
+                                            Help Manual</a></li>
+                                        <li><a href="../Establishment/EmpTrgRegList.aspx">Training Registration</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#" class="fly">Sanskruti Gyana</a>
+                                    <ul>
+                                        <li><a href="#" class="fly">Chatra Sanskruti Gyana</a>
+                                            <ul>
+                                                
+                                                <li><a href="../Accounts/ChartaSanskrutiGyanList.aspx">Chatra SanskrutiGyana By SSVM</a></li>
+                                                <li><a href="../Accounts/ChatraSanskrutiGyanaPaidList.aspx">Chatra SanskrutiGyana Approved
+                                                    List</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#" class="fly">Acharya Sanskruti Gyana</a>
+                                            <ul>
+                                                
+                                                <li><a href="../Accounts/AcharyaSanskrutiGyanList.aspx">Acharya SanskrutiGyana By SSVM</a></li>
+                                                <li><a href="../Accounts/AcharyaSanskrutiGyanaPaidList.aspx">Acharya SanskrutiGyana
+                                                    Approved List</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="#" class="fly">SVS Patrika</a>
+                                    <ul>
+                                        
+                                        <li><a href="../Accounts/PatraPatrikaBySSVMList.aspx">Patrika Order By SSVM</a></li>
+                                        
+                                        <li><a href="../Accounts/rptMZ_Contributions.aspx">Report: List of Subscribers</a></li>
+                                        
+                                    </ul>
+                                </li>
+                                <li><a href="../Accounts/PrakashanPmtList.aspx">Prakashan Payment List (OLD)</a></li>
+                                <li><a href="../Accounts/PayMiscFeesList.aspx">Misc. Payment</a></li>
+                                <li><a href="../Accounts/DonationPmt.aspx?pmtType=d">Donation Payment</a></li>
+                                <li><a href="../Accounts/DonationPmt.aspx?pmtType=s">Sebasamarpan Payment</a></li>
+                            </ul>
+                        </li>
+                        <li class="top"><a href="#" class="top_link"><span class="down">Acharya Chayana</span></a>
+                            <ul class="sub">
+                                <li><a target="_blank" href="../Up_Files/SVS_AcharyaChayan_Help.pdf">Help Manual(Acharya
+                                    Chayana)</a></li>
+                                <li><a href="../StaffSelection/StaffRequirementNewList.aspx">Place Staff Requirement</a></li>
+                                <li><a href="../StaffSelection/CandidateList.aspx">Candidate Registration</a></li>
+                                
+                                <li><a href="#" class="fly">Reports</a>
+                                    <ul>
+                                        
+                                        <li><a href="../StaffSelection/rptStaffRequirement.aspx">Staff Requirement For SSVM</a></li>
+                                        <li><a href="../StaffSelection/rptStaffRequirementConsolidated.aspx">Staff Requirement
+                                            Consolidated</a></li>
+                                        <li><a href="../StaffSelection/rptSubjectwiseRequirement.aspx">Subjectwise Staff Requirement</a></li>
+                                        <li><a href="../StaffSelection/rptCandidateList.aspx">Candidate List(DR Report)</a></li>
+                                        
+                                        
+                                        <li><a href="../StaffSelection/rptSSAdmitCard.aspx">Download Admit Card</a></li>
+                                        
+                                        
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                         <li class="top"><a href="#" class="top_link"><span class="down">Examinations</span></a>
+                            <ul class="sub">
+                                <li><a target="_blank" href="../Up_Files/SVS_Exam_Reg_OnlinePayHelpManual.pdf">Help
+                                    Manual(Online Registration)</a></li>
+                                <li><a href="../Exams/StudentAdmissionList.aspx">Student Registration</a></li>
+                                <li><a href="../Exams/DRReportList.aspx">Payment Entry / Receipt Print</a></li>
+                                <li><a href="#" class="fly">Reports</a>
+                                    <ul>
+                                        <li><a href="../Exams/DRReport.aspx">DR Report / Payment Details</a></li>
+                                        <li><a href="../Exams/rptAdmitcard.aspx">Admitcard Download</a></li>
+                                        <li><a href="../Exams/rptSchoolwiseresult.aspx">Schoolwise Result</a></li>
+                                        <li><a href="../Exams/ExamGenCertificate.aspx">Generate Certificate</a></li>
+                                    </ul>
+                                </li>
+                                
+                                
+                            </ul>
+                        </li>
+                        
+                        <li class="top"><a href="#" class="top_link"><span class="down">Sports & Games</span></a>
+                            <ul class="sub">
+                                <li><a href="#" class="fly">Manage Sports</a>
+                                    <ul>
+                                        
+                                        <li><a href="../Sports/SportsParticipantNewList.aspx">Participant Registration</a></li>
+                                        
+                                        
+                                        
+                                        
+                                    </ul>
+                                </li>
+                                <li><a href="#" class="fly">Reports</a>
+                                    <ul>
+                                        <li><a href="../Sports/RptSportsParticipantSankula.aspx">Participant List</a></li>
+                                        <li><a href="../Sports/RptSportsParticipantGameSankula.aspx">Game Wise Participant List</a></li>
+                                        
+                                        <li><a href="../Sports/rptTop3ResultSankulaLevel.aspx">Top 3 Result (Consolidated)</a></li>
+                                        <li><a href="../Sports/rptTop3ResultCatWithName.aspx">Top 3 Result (Detailed)</a></li>
+                                        <li><a href="../Sports/rptStudChampionship.aspx">Participant Championship</a></li>
+                                        <li><a href="../Sports/rptHighestRecord.aspx">Eventwise Highest Record Holder</a></li>
+                                        
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                          <li class="top"><a href="#" class="top_link"><span class="down">Prakashan Order</span></a>
+                            <ul class="sub">
+                                <li><a href="../PrakasanInventory/InvOrderListSSVM.aspx">Prakashan Order</a></li>
+                                
+                                <li><a href="../PrakasanInventory/InvOrderPmtList.aspx">Prakashan Payment List</a></li>
+                                <li><a href="#" class="fly">Reports</a>
+                                    <ul>
+                                        <li><a href="../PrakasanInventory/InvRpt_SSVMOrderReq.aspx">SSVM Order Requirement</a></li>   
+                                        <li><a href="../PrakasanInventory/InvRpt_OrdwiseBillStatus.aspx">Orderwise Bill Status</a></li>                                 
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        
+                        <li class="top"><a target="_blank" href="http://103.76.208.200/crm/admin/RaiseComplain.aspx?pid=svs"
+                            class="top_link"><span class="down">HELP ME NOW</span></a> </li>
+                        <div style="width: 88px; float: right; text-align: right;">
+                            <input type="image" name="ctl00$ImgBtnLogout" id="ctl00_ImgBtnLogout" src="../images/logout.jpg" style="border-width:0px;" />
+                        </div>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td class="bedcromb">
+                <div style="width: 550px; float: left; padding-top: 5px; padding-left: 15px;">
+                    <span id="ctl00_lblPage">Mail Box</span>
+                </div>
+                <div style="width: 350px; float: right; padding-top: 5px; margin-right: 15px;" class="userlogin">
+                    <span id="ctl00_Labelwelcome">Welcome</span>
+                    <span id="ctl00_lblUser" class="user">Bhojpur[<font color='black'>ssvm1156</font>]</span>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
+                <table class="innersectbl" align="center" style="height: 475px;">
+                    <tr>
+                        <td valign="top">
+                            
+    
+    <div align="center">
+        <div class="innerdiv" style="width: 95%">
+            <div style="padding: 8px;">
+                <table width="100%">
+                    <tr>
+                        <td>
+                            <input type="submit" name="ctl00$ContentPlaceHolder1$btnSendMail" value="Compose New Mail" id="ctl00_ContentPlaceHolder1_btnSendMail" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top" align="center" id="mail">
+                            <div>
+	<table class="gridtext" cellspacing="0" rules="all" border="1" id="ctl00_ContentPlaceHolder1_gvDnlodList" style="width:100%;border-collapse:collapse;">
+		<tr class="headergrid" style="height:30px;">
+			<th align="left" scope="col" style="width:100px;">From</th><th align="left" scope="col" style="width:100px;">Subject</th><th align="left" scope="col" style="width:130px;">Date (Time)</th><th align="left" scope="col" style="width:300px;">Description</th><th align="left" scope="col" style="width:100px;">Attachment</th><th align="left" scope="col" style="width:60px;">Size</th><th align="left" scope="col" style="width:100px;">Valid Till</th>
+		</tr><tr>
+			<td align="left" valign="middle" style="width:100px;">
+                                            College Sqr. Cuttack</a>
+                                        </td><td align="left" valign="middle" style="width:100px;">
+                                            Regarding SVS SMS web Background</a>
+                                        </td><td align="left" valign="middle" style="width:100px;">
+                                            14 Apr 2023 (11:09AM)</a>
+                                        </td><td align="left" valign="middle">
+                                            Kind attention SVS IT Head.
+The home Screen of SVS School Management System showing Maa Saraswati with Peacock, which is not correct. As a culture oriented organisation our duty and responsibility is to present appropriate things in public domain.Please make necessary changes to correct the same.
+
+Bibhu Bhai
+Cuttack
+                                        </td><td align="left" valign="middle" style="width:100px;">
+                                            <a id="ctl00_ContentPlaceHolder1_gvDnlodList_ctl02_lnkDownload" href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$gvDnlodList$ctl02$lnkDownload','')">SVS Home.jpg</a>
+                                            
+                                            <input type="hidden" name="ctl00$ContentPlaceHolder1$gvDnlodList$ctl02$hfDownload" id="ctl00_ContentPlaceHolder1_gvDnlodList_ctl02_hfDownload" value="SVS Home14_04_2023_110920.jpg" />
+                                        </td><td align="left" valign="middle" style="width:60px;">
+                                            216.25 KB
+                                        </td><td align="left" valign="middle">
+                                            -N/A-
+                                        </td>
+		</tr><tr class="gridtext">
+			<td align="left" valign="middle" style="width:100px;">
+                                            Bamebari</a>
+                                        </td><td align="left" valign="middle" style="width:100px;">
+                                            ACHARYA KALYANA PANTHI</a>
+                                        </td><td align="left" valign="middle" style="width:100px;">
+                                            16 Mar 2023 (12:13PM)</a>
+                                        </td><td align="left" valign="middle">
+                                            DOUBLE ENTRY IN ACHARYA KALYAN PANTHI IN NAME OF GOURI MAHANTA HOW IT DELETE ONE
+                                        </td><td align="left" valign="middle" style="width:100px;">
+                                            
+                                            -N/A-
+                                            <input type="hidden" name="ctl00$ContentPlaceHolder1$gvDnlodList$ctl03$hfDownload" id="ctl00_ContentPlaceHolder1_gvDnlodList_ctl03_hfDownload" />
+                                        </td><td align="left" valign="middle" style="width:60px;">
+                                            -N/A-
+                                        </td><td align="left" valign="middle">
+                                            -N/A-
+                                        </td>
+		</tr><tr>
+			<td align="left" valign="middle" style="width:100px;">
+                                            Balia</a>
+                                        </td><td align="left" valign="middle" style="width:100px;">
+                                            sahajoga rashi</a>
+                                        </td><td align="left" valign="middle" style="width:100px;">
+                                            22 Sep 2022 (12:08PM)</a>
+                                        </td><td align="left" valign="middle">
+                                            sahajogarashi-2022
+                                        </td><td align="left" valign="middle" style="width:100px;">
+                                            <a id="ctl00_ContentPlaceHolder1_gvDnlodList_ctl04_lnkDownload" href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$gvDnlodList$ctl04$lnkDownload','')">sahajogarashi-111.jpg</a>
+                                            
+                                            <input type="hidden" name="ctl00$ContentPlaceHolder1$gvDnlodList$ctl04$hfDownload" id="ctl00_ContentPlaceHolder1_gvDnlodList_ctl04_hfDownload" value="sahajogarashi-11122_09_2022_120851.jpg" />
+                                        </td><td align="left" valign="middle" style="width:60px;">
+                                            103.77 KB
+                                        </td><td align="left" valign="middle">
+                                            -N/A-
+                                        </td>
+		</tr><tr class="gridtext">
+			<td align="left" valign="middle" style="width:100px;">
+                                            Balia</a>
+                                        </td><td align="left" valign="middle" style="width:100px;">
+                                            sahajoga rashi</a>
+                                        </td><td align="left" valign="middle" style="width:100px;">
+                                            22 Sep 2022 (12:08PM)</a>
+                                        </td><td align="left" valign="middle">
+                                            sahajogarashi2022
+                                        </td><td align="left" valign="middle" style="width:100px;">
+                                            <a id="ctl00_ContentPlaceHolder1_gvDnlodList_ctl05_lnkDownload" href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$gvDnlodList$ctl05$lnkDownload','')">sahajogarashi-11.jpg</a>
+                                            
+                                            <input type="hidden" name="ctl00$ContentPlaceHolder1$gvDnlodList$ctl05$hfDownload" id="ctl00_ContentPlaceHolder1_gvDnlodList_ctl05_hfDownload" value="sahajogarashi-1122_09_2022_120819.jpg" />
+                                        </td><td align="left" valign="middle" style="width:60px;">
+                                            120.86 KB
+                                        </td><td align="left" valign="middle">
+                                            -N/A-
+                                        </td>
+		</tr><tr>
+			<td align="left" valign="middle" style="width:100px;">
+                                            Balia</a>
+                                        </td><td align="left" valign="middle" style="width:100px;">
+                                            sahajoga rashi</a>
+                                        </td><td align="left" valign="middle" style="width:100px;">
+                                            22 Sep 2022 (12:07PM)</a>
+                                        </td><td align="left" valign="middle">
+                                            sahajogarashi-2022-23
+                                        </td><td align="left" valign="middle" style="width:100px;">
+                                            <a id="ctl00_ContentPlaceHolder1_gvDnlodList_ctl06_lnkDownload" href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$gvDnlodList$ctl06$lnkDownload','')">sahajogarashi-22.jpg</a>
+                                            
+                                            <input type="hidden" name="ctl00$ContentPlaceHolder1$gvDnlodList$ctl06$hfDownload" id="ctl00_ContentPlaceHolder1_gvDnlodList_ctl06_hfDownload" value="sahajogarashi-2222_09_2022_120719.jpg" />
+                                        </td><td align="left" valign="middle" style="width:60px;">
+                                            114.66 KB
+                                        </td><td align="left" valign="middle">
+                                            -N/A-
+                                        </td>
+		</tr><tr class="gridtext">
+			<td align="left" valign="middle" style="width:100px;">
+                                            CHUDANGASAHI,PURI</a>
+                                        </td><td align="left" valign="middle" style="width:100px;">
+                                            PRAKASAN BIBHAGA</a>
+                                        </td><td align="left" valign="middle" style="width:100px;">
+                                            28 Dec 2021 ( 2:55PM)</a>
+                                        </td><td align="left" valign="middle">
+                                            PUSTAK LIST
+                                        </td><td align="left" valign="middle" style="width:100px;">
+                                            <a id="ctl00_ContentPlaceHolder1_gvDnlodList_ctl07_lnkDownload" href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$gvDnlodList$ctl07$lnkDownload','')">Image (3).jpg</a>
+                                            
+                                            <input type="hidden" name="ctl00$ContentPlaceHolder1$gvDnlodList$ctl07$hfDownload" id="ctl00_ContentPlaceHolder1_gvDnlodList_ctl07_hfDownload" value="Image (3)28_12_2021_025543.jpg" />
+                                        </td><td align="left" valign="middle" style="width:60px;">
+                                            760.94 KB
+                                        </td><td align="left" valign="middle">
+                                            -N/A-
+                                        </td>
+		</tr><tr>
+			<td align="left" valign="middle" style="width:100px;">
+                                            CHUDANGASAHI,PURI</a>
+                                        </td><td align="left" valign="middle" style="width:100px;">
+                                            PRAKASAN BIBHAGA</a>
+                                        </td><td align="left" valign="middle" style="width:100px;">
+                                            28 Dec 2021 ( 2:55PM)</a>
+                                        </td><td align="left" valign="middle">
+                                            PUSTAK LIST
+                                        </td><td align="left" valign="middle" style="width:100px;">
+                                            <a id="ctl00_ContentPlaceHolder1_gvDnlodList_ctl08_lnkDownload" href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$gvDnlodList$ctl08$lnkDownload','')">Image (2).jpg</a>
+                                            
+                                            <input type="hidden" name="ctl00$ContentPlaceHolder1$gvDnlodList$ctl08$hfDownload" id="ctl00_ContentPlaceHolder1_gvDnlodList_ctl08_hfDownload" value="Image (2)28_12_2021_025510.jpg" />
+                                        </td><td align="left" valign="middle" style="width:60px;">
+                                            756.60 KB
+                                        </td><td align="left" valign="middle">
+                                            -N/A-
+                                        </td>
+		</tr><tr class="gridtext">
+			<td align="left" valign="middle" style="width:100px;">
+                                            CHUDANGASAHI,PURI</a>
+                                        </td><td align="left" valign="middle" style="width:100px;">
+                                            PRAKASAN BIBHAGA</a>
+                                        </td><td align="left" valign="middle" style="width:100px;">
+                                            28 Dec 2021 ( 2:53PM)</a>
+                                        </td><td align="left" valign="middle">
+                                            PUSTAK LIST
+                                        </td><td align="left" valign="middle" style="width:100px;">
+                                            <a id="ctl00_ContentPlaceHolder1_gvDnlodList_ctl09_lnkDownload" href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$gvDnlodList$ctl09$lnkDownload','')">1.jpg</a>
+                                            
+                                            <input type="hidden" name="ctl00$ContentPlaceHolder1$gvDnlodList$ctl09$hfDownload" id="ctl00_ContentPlaceHolder1_gvDnlodList_ctl09_hfDownload" value="128_12_2021_025352.jpg" />
+                                        </td><td align="left" valign="middle" style="width:60px;">
+                                            1.08 MB
+                                        </td><td align="left" valign="middle">
+                                            -N/A-
+                                        </td>
+		</tr><tr>
+			<td align="left" valign="middle" style="width:100px;">
+                                            Manmunda</a>
+                                        </td><td align="left" valign="middle" style="width:100px;">
+                                            Geetanjali mahaptra medical report</a>
+                                        </td><td align="left" valign="middle" style="width:100px;">
+                                            04 Apr 2018 ( 8:40PM)</a>
+                                        </td><td align="left" valign="middle">
+                                            Geetanjali mahatra medical report back side.
+                                        </td><td align="left" valign="middle" style="width:100px;">
+                                            <a id="ctl00_ContentPlaceHolder1_gvDnlodList_ctl10_lnkDownload" href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$gvDnlodList$ctl10$lnkDownload','')">15228974328521346033866.jpg</a>
+                                            
+                                            <input type="hidden" name="ctl00$ContentPlaceHolder1$gvDnlodList$ctl10$hfDownload" id="ctl00_ContentPlaceHolder1_gvDnlodList_ctl10_hfDownload" value="1522897432852134603386604_04_2018_080500.jpg" />
+                                        </td><td align="left" valign="middle" style="width:60px;">
+                                            2.54 MB
+                                        </td><td align="left" valign="middle">
+                                            -N/A-
+                                        </td>
+		</tr><tr class="gridtext">
+			<td align="left" valign="middle" style="width:100px;">
+                                            Basudevpur</a>
+                                        </td><td align="left" valign="middle" style="width:100px;">
+                                            Computer Prasikshan</a>
+                                        </td><td align="left" valign="middle" style="width:100px;">
+                                            28 Dec 2016 ( 3:32AM)</a>
+                                        </td><td align="left" valign="middle">
+                                            Sorry news is wrong
+                                        </td><td align="left" valign="middle" style="width:100px;">
+                                            
+                                            -N/A-
+                                            <input type="hidden" name="ctl00$ContentPlaceHolder1$gvDnlodList$ctl11$hfDownload" id="ctl00_ContentPlaceHolder1_gvDnlodList_ctl11_hfDownload" />
+                                        </td><td align="left" valign="middle" style="width:60px;">
+                                            -N/A-
+                                        </td><td align="left" valign="middle">
+                                            -N/A-
+                                        </td>
+		</tr><tr class="headergrid" align="center">
+			<td colspan="7"><table border="0">
+				<tr>
+					<td><span>1</span></td><td><a href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$gvDnlodList','Page$2')">2</a></td><td><a href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$gvDnlodList','Page$3')">3</a></td>
+				</tr>
+			</table></td>
+		</tr>
+	</table>
+</div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td style="height: 10px;">
+            </td>
+        </tr>
+        <tr>
+            <td valign="middle" class="bottombar">
+                <div style="width: 500px; float: left; padding-left: 20px;">
+                    All &copy; Rights Reserved. Shiksha Vikash Samiti, Odisha
+                </div>
+                <div style="width: 200px; padding-right: 20px; float: right" align="right">
+                    Powered by : CTSPL
+                </div>
+            </td>
+        </tr>
+    </table>
+    
+
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.initialize();
+//]]>
+</script>
+</form>
+</body>
+</html>

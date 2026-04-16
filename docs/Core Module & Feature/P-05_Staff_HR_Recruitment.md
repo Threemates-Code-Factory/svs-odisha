@@ -1,0 +1,364 @@
+# P-05 · Single Channel for Staff Requests, Recruitment, Exams & Posting
+
+**Module Code:** P-05  
+**Priority:** 🔴 Critical  
+**Estimated Effort:** 7–9 Weeks  
+**Team:** 1 Senior Backend Developer + 1 Frontend Developer + 1 QA  
+**Depends On:** P-11 (RBAC), P-04 (Communication), Establishment Module (Staff Records)  
+
+---
+
+## 1. Module Overview
+
+Staff management across 800+ SSVM schools involves a complex web of recruitment, posting, transfers, leave applications, exam duty assignments, and performance tracking. Currently, every one of these workflows happens through a mixture of paper forms, WhatsApp messages, and scattered entries across multiple modules — with no single source of truth for any teacher's status.
+
+This module creates a **Unified HR and Staffing Operations Platform** with:
+
+1. **Unified Sevabrati (Staff) Profile** — single authoritative record for every teacher/staff member, pulling together all their data from recruitment through retirement
+2. **Recruitment Lifecycle** — end-to-end Acharya Chayana workflow with online applications, admit cards, and selection tracking
+3. **Transfer and Posting Management** — structured workflow for cross-school postings with approval chain
+4. **Leave Management** — online leave application, approval, and balance tracking
+5. **Exam Duty Management** — assignment of invigilation and evaluation duties with confirmation tracking
+6. **Performance Evaluation Framework** — structured teacher evaluation with competency mapping
+
+---
+
+## 2. Problem Statement (Current Gaps)
+
+| # | Current Gap | Consequence |
+|---|-------------|-------------|
+| 1 | No unified teacher profile | Same data re-entered across recruitment, SAATF, AKP, training — inconsistencies everywhere |
+| 2 | Paper-based transfer requests | Cross-school postings take weeks of phone calls; no status tracking |
+| 3 | No leave management system | Leave tracked informally; no balance records, no approval trail |
+| 4 | No exam duty tracking | Invigilation assignments are communicated verbally or by phone |
+| 5 | No performance evaluation | No structured framework for teacher competency tracking |
+| 6 | Recruitment is partially digitised | Only requirement and candidate registration — no full lifecycle |
+
+---
+
+## 3. Functional Requirements
+
+### 3.1 Unified Sevabrati Profile
+
+Every Sevabrati in the system has a single profile that aggregates data from all modules:
+
+**Profile Sections:**
+- **Personal Details:** Full name, date of birth, gender, Aadhaar, mobile, email, address, photograph
+- **Employment Details:** SSVM code, designation, date of joining, employee type (Sevabrati/Purnakalin/Prayas), current status (Active/On Leave/Transferred/Retired)
+- **Qualification:** Academic qualifications, teacher training certifications, subject specialisations
+- **AKP Membership:** Membership status, contribution history (linked from Accounts module)
+- **SAATF Membership:** Membership status, monthly contribution history, nominee details (linked from Accounts module)
+- **Training History:** All training programs attended, certificates earned (linked from P-08)
+- **Transfer History:** Full timeline of postings across SSVMs
+- **Leave Records:** Leave taken vs. balance for each leave type
+- **Exam Duty History:** All invigilation and evaluation assignments
+- **Performance Evaluations:** Historical evaluation scores and competency records
+- **Sewa Timeline:** Sewa-specific records (linked from F-03)
+- **Documents:** Uploaded qualification certificates, appointment letter, Aadhaar copy
+
+No data is re-entered. When a staff member is registered in SAATF, that data is shown in the profile — not duplicated.
+
+### 3.2 Acharya Chayana (Recruitment) Lifecycle
+
+**Step 1: Staff Requirement Posting (SSVM)**
+- SSVM posts requirement with: Subject, Class Level (Primary/Middle/Secondary), Vacancies, Required Qualification, Additional Notes
+- Requirement visible to Sankula and Sambhag for review
+- Sambhag/Head Office approves requirement before it goes to candidates
+
+**Step 2: Candidate Registration (Public-Facing Form)**
+- Candidates register online (public-facing page, no login required)
+- Fields: Name, DOB, Gender, Address, Mobile, Email, Aadhaar, Qualification Details, Subject Specialisation, Preference of SSVM, File Uploads (marksheets, certificates)
+- System generates Candidate ID and sends confirmation SMS/email
+
+**Step 3: Admit Card Generation**
+- Head Office / Sankula reviews registered candidates for a requirement
+- Eligible candidates are approved → Admit Card auto-generated with: Candidate Name, ID, Exam Centre (SSVM name), Date, Time, Reporting Instructions
+- Candidate can download Admit Card using Candidate ID + DOB (no login)
+
+**Step 4: Exam / Interview**
+- Exam date and centre recorded in system
+- Attendance marking on exam day (online, by exam centre admin)
+- Marks entry after exam (by Sankula or Head Office)
+
+**Step 5: Selection and Appointment**
+- Selected candidates listed with rank
+- Appointment letter generated by system (with digital signature of Sambhag/HO authority)
+- Selected candidate converted to Sevabrati profile on the date of joining
+- Historical candidate record retained
+
+### 3.3 Transfer and Posting Management
+
+**Transfer Request (Sevabrati-initiated):**
+- Sevabrati submits transfer request: Reason, Preferred SSVM, Willing to accept any posting (Y/N)
+- Request goes to Current SSVM Principal → Sankula → Sambhag → Head Office (approval chain based on transfer type)
+- Each approver can approve, reject, or suggest modification
+- Sevabrati notified at each stage
+- On final approval: Transfer date recorded, Sevabrati profile updated, old SSVM relieved, new SSVM onboarded
+
+**Administrative Posting (Head Office / Sambhag-initiated):**
+- Head Office or Sambhag initiates cross-school posting
+- Target SSVM and Sevabrati selected
+- System checks if Sevabrati is currently committed to exam duty or other obligations within the transfer window
+- Posting order generated (PDF with digital signature)
+- Sevabrati and both SSVMs notified
+
+**Transfer Dashboard:**
+- Open transfer requests with current stage in approval chain
+- Pending postings waiting for clearance
+- Transfer history by Sambhag, Bibhag, Sankula, SSVM
+
+### 3.4 Leave Management
+
+**Leave Types (configurable by Super Admin):**
+- Casual Leave (CL)
+- Medical Leave (ML)
+- Maternity Leave
+- Earned Leave (EL)
+- Duty Leave (for training, exam duty)
+- Extra-Ordinary Leave (without pay)
+
+**Leave Application (Sevabrati):**
+- Select leave type, from date, to date, reason, attach supporting documents (for ML/Maternity)
+- System automatically deducts applied days from leave balance display
+- Application goes to Principal → (Sankula for leaves > 7 days)
+
+**Leave Approval (Principal):**
+- View pending applications with staff leave balance displayed
+- Approve, reject, or partially approve (approve fewer days)
+- Approved leaves reflect in leave balance
+
+**Leave Reports:**
+- Staff-wise leave balance by type
+- School-wise leave usage summary
+- Long-absence report (staff on leave > 30 consecutive days)
+
+### 3.5 Exam Duty Management
+
+**Duty Assignment (Sankula/Bibhag):**
+- Select exam event (from Examinations module)
+- Assign Sevabrati from any SSVM in the jurisdiction to roles: Chief Invigilator, Invigilator, Flying Squad, Answer Sheet Evaluator
+- System checks: Is Sevabrati currently on approved leave? Is Sevabrati already assigned to another duty for the same date?
+- If conflict detected, system warns the assigner
+
+**Duty Notification:**
+- Sevabrati notified in-app + SMS with duty details
+- Sevabrati can confirm duty acceptance or raise an objection (with reason)
+- Objections go to Sankula for review — alternative assignment made if approved
+
+**Duty Tracking:**
+- Duty roster by exam event — all assigned staff with confirmation status
+- Attendance marking on duty day
+- Duty completion record feeds into Sevabrati profile
+
+### 3.6 Performance Evaluation Framework
+
+**Evaluation Template (configured by Head Office):**
+- Dimensions: Teaching Quality, Punctuality, Sanskar Activities Participation, Student Outcomes, Administrative Responsibility, Professional Development
+- Rating scale: 1–5 per dimension with weighted overall score
+- Evaluation frequency: Annual or as directed
+
+**Evaluation Process:**
+- Initiated by Bibhag Nirikshayak or Sambhag Sanjojak during school visit (links with F-04)
+- Self-assessment by Sevabrati (optional)
+- Final evaluation recorded by evaluator
+- Sevabrati can view their own evaluation; cannot edit
+- Head Office sees evaluation summaries across the network
+
+**Competency Matrix:**
+- Map each Sevabrati to subjects they are qualified and trained to teach
+- SSVM Principal can view which staff are under-qualified for their current assignment
+- Head Office can run a network-wide competency gap report
+
+---
+
+## 4. Non-Functional Requirements
+
+| Requirement | Specification |
+|-------------|---------------|
+| Profile Load | Unified profile page loads in < 2 seconds |
+| Candidate Registration | Public form must support 500 concurrent registrations |
+| Admit Card Generation | Batch admit cards for 1,000 candidates in < 5 minutes |
+| Leave Balance | Real-time balance updated immediately on approval |
+| Search | Staff search by name, ID, Aadhaar returns results in < 1 second |
+
+---
+
+## 5. Data Models
+
+### 5.1 Sevabrati Profile (Extended)
+```
+sevabrati
+├── sevabrati_id (UUID, PK)
+├── employee_code (unique across network)
+├── full_name
+├── date_of_birth
+├── gender
+├── aadhaar_number (encrypted)
+├── mobile
+├── email
+├── current_ssvm_code (FK → ssvms)
+├── designation
+├── employee_type (ENUM: SEVABRATI, PURNAKALIN, PRAYAS)
+├── date_of_joining
+├── status (ENUM: ACTIVE, ON_LEAVE, TRANSFERRED, RETIRED, RESIGNED)
+├── photo_url
+└── created_at
+```
+
+### 5.2 Recruitment Requirements Table
+```
+recruitment_requirements
+├── requirement_id (UUID, PK)
+├── ssvm_code
+├── subject
+├── class_level
+├── vacancies (INT)
+├── required_qualification
+├── notes
+├── status (ENUM: DRAFT, PENDING_APPROVAL, APPROVED, CLOSED)
+├── posted_at
+└── approved_at
+```
+
+### 5.3 Candidates Table
+```
+candidates
+├── candidate_id (UUID, PK)
+├── requirement_id (FK → recruitment_requirements)
+├── full_name
+├── date_of_birth
+├── aadhaar_number (encrypted)
+├── mobile
+├── email
+├── qualification_details (JSONB)
+├── preferred_ssvm
+├── status (ENUM: REGISTERED, ADMIT_CARD_ISSUED, APPEARED, SELECTED, NOT_SELECTED)
+├── exam_marks (nullable)
+├── rank (nullable)
+└── registered_at
+```
+
+### 5.4 Transfers Table
+```
+transfers
+├── transfer_id (UUID, PK)
+├── sevabrati_id (FK → sevabrati)
+├── from_ssvm_code
+├── to_ssvm_code
+├── transfer_type (ENUM: SELF_REQUEST, ADMINISTRATIVE)
+├── reason
+├── current_stage (ENUM: PRINCIPAL, SANKULA, SAMBHAG, HEAD_OFFICE, APPROVED, REJECTED)
+├── transfer_date (nullable)
+├── status
+└── initiated_at
+```
+
+### 5.5 Leave Records Table
+```
+leave_records
+├── leave_id (UUID, PK)
+├── sevabrati_id (FK → sevabrati)
+├── leave_type
+├── from_date
+├── to_date
+├── days_applied
+├── days_approved (nullable)
+├── reason
+├── status (ENUM: PENDING, APPROVED, REJECTED, CANCELLED)
+├── approved_by_user_id (nullable)
+└── applied_at
+```
+
+### 5.6 Exam Duties Table
+```
+exam_duties
+├── duty_id (UUID, PK)
+├── exam_event_id (FK → exam_events)
+├── sevabrati_id (FK → sevabrati)
+├── duty_role (ENUM: CHIEF_INVIGILATOR, INVIGILATOR, FLYING_SQUAD, EVALUATOR)
+├── duty_date
+├── duty_centre_ssvm_code
+├── status (ENUM: ASSIGNED, CONFIRMED, OBJECTED, ATTENDED, ABSENT)
+├── objection_reason (nullable)
+└── assigned_at
+```
+
+---
+
+## 6. UI Screens
+
+| Screen | Path | Role Access | Description |
+|--------|------|-------------|-------------|
+| Sevabrati Profile | /staff/:id | All (own profile to SSVM level) | Unified staff profile |
+| Staff List | /staff | SSVM and above | Filterable staff list |
+| Recruitment Requirements | /recruitment/requirements | SSVM, Sankula, HO | Post and manage requirements |
+| Candidate Registration | /recruitment/register (public) | Public | Candidate self-registration |
+| Candidate List | /recruitment/:requirementId/candidates | Sankula, HO | Review candidates |
+| Admit Card | /recruitment/admit-card (public) | Public | Download by Candidate ID + DOB |
+| Marks Entry | /recruitment/:requirementId/marks | Sankula, HO | Enter exam marks |
+| Transfer Requests | /transfers | All | View and manage transfers |
+| New Transfer Request | /transfers/new | SSVM (Sevabrati) | Self-initiated transfer |
+| Transfer Approval | /transfers/:id | Sankula, Sambhag, HO | Approve/reject transfer |
+| Leave Applications | /leave | SSVM | My leave applications |
+| Leave Management | /leave/manage | Principal, Sankula | Approve/reject leave |
+| Exam Duty Roster | /exam-duties | Sankula, Bibhag | Create and manage duty roster |
+| My Exam Duties | /exam-duties/mine | Sevabrati | View assigned duties |
+| Performance Evaluation | /evaluations | Bibhag, Sambhag | Conduct evaluations |
+| Competency Matrix | /staff/competency | HO, Sambhag | Network-wide competency view |
+
+---
+
+## 7. Implementation Plan
+
+### Phase 1 — Unified Profile & Data Migration (Weeks 1–2)
+- [ ] Redesign Sevabrati schema to be the single source of truth
+- [ ] Build profile aggregation API (pulls from AKP, SAATF, Training, Exams, Transfers)
+- [ ] Build unified profile UI
+- [ ] Migrate existing employee data from legacy system
+
+### Phase 2 — Recruitment Lifecycle (Weeks 2–4)
+- [ ] Build requirement posting, approval workflow
+- [ ] Build public-facing candidate registration form
+- [ ] Implement admit card generation (PDF with system branding)
+- [ ] Build attendance marking and marks entry
+- [ ] Build selection and appointment letter generation
+
+### Phase 3 — Transfer and Leave (Weeks 4–6)
+- [ ] Build transfer request and multi-level approval workflow
+- [ ] Build posting order generation
+- [ ] Build leave type configuration and leave application form
+- [ ] Implement leave approval and balance tracking
+- [ ] Build leave reports
+
+### Phase 4 — Exam Duty & Performance (Weeks 6–8)
+- [ ] Build exam duty assignment with conflict detection
+- [ ] Build duty roster view and confirmation workflow
+- [ ] Build performance evaluation template and evaluation form
+- [ ] Build competency matrix
+
+### Phase 5 — Testing (Weeks 8–9)
+- [ ] Test full recruitment lifecycle from requirement to appointment
+- [ ] Test transfer approval chain: reject at Sankula, verify SSVM notified
+- [ ] Test exam duty conflict detection
+- [ ] Performance test profile load for staff with 10+ years of data
+
+---
+
+## 8. Acceptance Criteria
+
+- [ ] A Sevabrati profile shows AKP, SAATF, training, transfer, and leave data from a single page without re-entering data
+- [ ] A candidate can register online, receive a confirmation SMS, and download their admit card using Candidate ID + DOB
+- [ ] A self-initiated transfer request moves through Principal → Sankula → Sambhag → Head Office stages with SSVM notified at each stage
+- [ ] Leave balance decreases correctly on approval and restored on rejection
+- [ ] Assigning a Sevabrati to exam duty on a date when they are on approved leave triggers a conflict warning
+- [ ] Performance evaluation completed by Bibhag appears in the Sevabrati's profile history
+
+---
+
+## 9. Developer Notes
+
+- The Sevabrati profile is a read-aggregation view — do not duplicate data into the profile table; instead, join from the source tables at query time and cache aggressively
+- Admit card PDF must be generated server-side (using a PDF library like Puppeteer or WeasyPrint) — not client-side, to ensure consistent formatting
+- The public candidate registration form must be rate-limited (5 submissions per IP per hour) to prevent abuse
+- Transfer approval chain is configurable: some Sambhags may have a Bibhag approval step — make the chain configurable per transfer type
+- Leave balance must be computed from approved leave records — do not store a mutable balance field (it can get out of sync); compute it on read from the leave_records table

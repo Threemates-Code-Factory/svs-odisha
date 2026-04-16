@@ -1,0 +1,30 @@
+
+> @svs/web@2.1.0 build
+> next build
+
+▲ Next.js 16.2.4 (Turbopack)
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 27.4s
+  Running TypeScript ...
+Failed to type check.
+
+./src/components/faq/ChangelogTab.tsx:47:7
+Type error: Type '{ children: Element[]; className: string; defaultValue: string; enableScrollAnimation: boolean; animationDelay: number; }' is not assignable to type 'IntrinsicAttributes & ((AccordionSingleProps | AccordionMultipleProps) & RefAttributes<HTMLDivElement>)'.
+  Property 'enableScrollAnimation' does not exist on type 'IntrinsicAttributes & ((AccordionSingleProps | AccordionMultipleProps) & RefAttributes<HTMLDivElement>)'.
+
+  [90m45 |[0m       className=[32m"mx-auto w-full max-w-[850px] space-y-4"[0m
+  [90m46 |[0m       defaultValue=[32m"1"[0m
+[31m[1m>[0m [90m47 |[0m       enableScrollAnimation={[36mtrue[0m}
+  [90m   |[0m       [31m[1m^[0m
+  [90m48 |[0m       animationDelay={[35m0.1[0m}>
+  [90m49 |[0m       {faqData.map((item) => (
+  [90m50 |[0m         <[33mAccordionItem[0m
+Next.js build worker exited with code: 1 and signal: null
+npm error Lifecycle script `build` failed with error:
+npm error code 1
+npm error path E:\SVS ODISHA\apps\web
+npm error workspace @svs/web@2.1.0
+npm error location E:\SVS ODISHA\apps\web
+npm error command failed
+npm error command C:\WINDOWS\system32\cmd.exe /d /s /c next build

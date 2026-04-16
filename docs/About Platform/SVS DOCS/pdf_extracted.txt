@@ -1,0 +1,253 @@
+
+
+=== PAGE 1 ===
+Step By Step Help Manual for Online Registration for  
+Pradeshika Medha & Ganita Pratibha & Payment t o Pranta Office Online  
+ 
+1. Open Shiksha Vikash Samiti, Odisha Website ( http://www.svsodisha.com ) in any browser like Google 
+Chrome.  You will get following screen displayed: - 
+ 
+ 
+ 
+2. Scroll down to Important Links section and click on SVS Establishment Management System  
+You will get following screen displayed with different options for SVS Establishment Management Syst em:- 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Click Here  
+
+=== PAGE 2 ===
+3.  In SVS Establishment Management System Screen click on STUDENT EXAM  Module  
+    (Or you can directly access from this link: - https://www.svsems.in/  
+ 
+4. Now you will be represented with SVS EMS Login Screen as follows: -
+ 
+In User Login  section select User Type as SSVM . Enter your school  User ID and respective  Password and click 
+on Login Button .  
+Click Here  
+Click Here  
+
+=== PAGE 3 ===
+5. You will be prompted for Change Password if you have not changed your default password yet.  
+ 
+Enter the details for changing the password as mentioned in the following screen and click on Submit  button 
+the default password will be modified.                    
+                                     
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Click Here  
+
+=== PAGE 4 ===
+6. Now you will get Establishment Management System Home Page as follows: - 
+ 
+7. For Student Registration ( Scholarship Exam) :- 
+    Select the Manu : - Examination   Student Scholarship   Student Registration  
+    As shown below: - 
+ 
+ 
+Click Here  
+
+=== PAGE 5 ===
+8. Now you will get following screen. Click on New Registration  
+ 
+9. You will be displayed with Student Registration screen as follows. Fill the registration details as shown in the 
+following screen and click on Save & Add New  button.   
+ 
+    
+The Registration List can be viewed in the List page as shown below: -  
+ 
+Click  Here  
+Click Here  
+
+=== PAGE 6 ===
+ 
+10. After the registration is completed  for desired students , Go for Payment Entry: - click Student Scholarship  
+ Payment Entry as shown below: - 
+ 
+ 
+On Click of Payment Entry,  You will get following screen . Here you can view the previous payment details by 
+clicking on Search  button :- 
+ 
+ 
+ 
+10. Now click on Add New  button for making the payment to Pranta Office. You will be displayed with 
+following screen . Click on Show  button to view the list of registrants: - 
+ 
+ 
+ 
+Click Here  
+1. Click Here  
+2. Click Here  
+
+=== PAGE 7 ===
+On previous screen click  on Submit Fee Details . Now you will get the screen as shown below: - 
+               
+ 
+11. If you have already paid the required amount through direct bank diposit, NEFT or any other method. 
+Please fill the payment details on the required field and click on Save  button . Then goto Step -21 to get the 
+online receipt . 
+       OR 
+If not paid click on Pay Online  button to make the payment online through SBI Collect.  (Follow the Steps 12 to 22) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+1. Click Here  2. Click Here  
+
+=== PAGE 8 ===
+12. Now the SBI Collect following screen will appear, Select I have read and accepted… ..  and click on Proceed  
+button.  
+ 
+13. Now in the next screen,  
+Select  State  of Corporation / Institution  as  Odisha  
+Select  Type of Corporate /  Institutions   as  Educational  Institution s  then click on Go button  
+ 
+Click Here  
+Click Here  
+
+=== PAGE 9 ===
+14. In the next screen,  
+Select Educational Institutions Name as  SHIKSHA VIKASH SAMITI ODISHA    
+And click on Submit  button  
+ 
+ 
+15. In the next screen,  
+Select Payment Category as  Payment Details    
+ 
+ 
+ 
+ 
+Click Here  
+Select Here  
+
+=== PAGE 10 ===
+16. On S election of the Payment Category , you will get following screen. Fill all the details as shown below and 
+click  on Submit  button   
+ 
+ 
+ 
+ 
+Click Here  
+
+=== PAGE 11 ===
+17. After that you will get following screen to verify the details you have entered in the previous scre en, after 
+verification of the details click on Confirm  button.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Click Here  
+
+=== PAGE 12 ===
+18. Now you will get different options for online payment as shown below. Select your preferred payment 
+option .  
+ 
+19. After selecting the preferred payment option you will be diverted to the respective bank login scree n as 
+shown below. Provide your internet banking Username and Password and follow onscreen instruction till the 
+payment is successful.  
+ 
+
+
+=== PAGE 13 ===
+20. After the successful payment you will get onscreen UTR/Reference No. Now  come back to the Exam Fee 
+Detail page from where you had started the Online paymen t process. Fill the payment details as sho wn in the 
+following screen and click on  Save  Button .  
+ 
+               
+ 
+ 
+21. After that you will get onscreen confirmation and an SMS will be sent to your mobile with following text: - 
+                                               BG-SVSSMS  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Thank you for submitting the Exam Fee . After verification 
+of the payment you will receive payment confirmation 
+and you will be able to download the Money Receipt from 
+our SVS -EMS portal.  Click Here  
+
+=== PAGE 14 ===
+22. Procedure to Download Money Receipt  (Can be downloaded after verification from Pranta Office) :- 
+    Select the Manu : - Examination   Student Scholarship  Payment Entry  
+    As shown below: - 
+ 
+ 
+ 
+ 
+ 
+You will get following screen: - 
+ Select Session Year and Click on Search  Button  
+ 
+ 
+ Now you will get the list of all payment done for exam as shown above.  
+ To download the Money Receipt click on Print Receipt   
+ Now the Money receipt will be Printed / Downloaded as follows: - 
+ 
+ 
+ 
+ 
+ 
+ 
+Click Here  
+Click Here  
+Click Here  
+
+=== PAGE 15 ===
+ 
+ 
+ 
+In case of facing any difficulties during the online payment process,  
+Please feel free to call our Help  Desk: - 
+9778177775 , 9337422373 , 7855055681 , 9556282399 , 8144199277  
+Email:  creative.santosh771@gmail.com , admin@creativetrends.in   
